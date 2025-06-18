@@ -1,0 +1,15 @@
+class Solution {
+  public:
+    char firstRep(string s) {
+        unordered_map<char,int>um;
+        for(char i :s){
+            um[i]++;
+        }
+        for(char i:s){
+            if(um[i]>1)
+                return i;
+        }
+        return '#';
+        
+    }
+};
